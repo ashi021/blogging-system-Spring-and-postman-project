@@ -6,12 +6,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+// This is a repository interface for managing Post entities
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
-    // Custom query to find posts by category ID
+    
+    // This method finds posts by the category ID
     List<Post> findByCategoryCategoryId(Long categoryId);
     
-    // Custom query to find posts by user ID
+    // This method finds posts by the user ID
     List<Post> findByUserUserId(Long userId);
 }
-
